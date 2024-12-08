@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eternals | Satya</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1b0033, #5b00a1);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-weight: 600;
+            margin: 0.5rem 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Header */
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            color: #9c4bff;
+            text-transform: uppercase;
+        }
+
+        nav {
+            display: flex;
+            gap: 1rem;
+        }
+
+        nav a {
+            color: #fff;
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background: rgba(156, 75, 255, 0.1);
+            color: #9c4bff;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: url('./B.jpg') center/cover no-repeat;
+        }
+
+        .hero h2 {
+            font-size: 2rem;
+            color: #ffd700;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .hero .btn {
+            margin-top: 1.5rem;
+            padding: 0.8rem 1.5rem;
+            background: #9c4bff;
+            color: #fff;
+            font-weight: bold;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .hero .btn:hover {
+            background: #ffd700;
+            color: #000;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 4rem 2rem;
+            background: #29004a;
+            text-align: center;
+        }
+
+        .services h2 {
+            font-size: 2rem;
+            color: #ffd700;
+            margin-bottom: 2rem;
+        }
+
+        .services .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .services .card {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .services .card img {
+            margin: 0 auto;
+            width: 60px;
+        }
+
+        .services .card h3 {
+            color: #ffd700;
+            margin-top: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .services .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Footer */
+        footer {
+            background: #000;
+            text-align: center;
+            padding: 1.5rem;
+            color: #fff;
+        }
+
+        footer p {
+            color: #ffd700;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            nav a {
+                font-size: 0.9rem;
+            }
+
+            .hero h2 {
+                font-size: 1.5rem;
+            }
+
+            .hero p {
+                font-size: 0.9rem;
+            }
+
+            .services h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Eternals Satya</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="https://wa.me/12268770888">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2 data-aos="fade-up">Welcome to Eternals Satya</h2>
+        <p data-aos="fade-up" data-aos-delay="300">Membangun solusi teknologi modern yang membawa masa depan lebih dekat.</p>
+        <button class="btn" data-aos="fade-up" data-aos-delay="500">Discover More</button>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2>Our Premium Services</h2>
+        <div class="card-container">
+            <div class="card" data-aos="zoom-in">
+                <img src="E.png" alt="Service Icon">
+                <h3>App Development</h3>
+                <p>Membangun aplikasi modern dan efektif.</p>
+            </div>
+            <div class="card" data-aos="zoom-in" data-aos-delay="200">
+                <img src="E.png" alt="Service Icon">
+                <h3>Script Tools</h3>
+                <p>Merancang alat scripting yang efisien.</p>
+            </div>
+            <div class="card" data-aos="zoom-in" data-aos-delay="400">
+                <img src="E.png" alt="Service Icon">
+                <h3>Neutral Consultant</h3>
+                <p>Menyediakan konsultasi netral dan profesional.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2020 Eternals Satya. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+        <script src="script.js"></script>
+    </script>
+</body>
+</html>
