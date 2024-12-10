@@ -1,214 +1,229 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of a Dark Hacker and Programmer. Welcome to the shadows.">
-    <title>HackerDark | Portfolio</title>
-    <link rel="icon" href="E.png" type="image/png">
+    <meta name="author" content="Eternals Satya | Cilya">
+    <meta name="description" content="Eternals Satya | Subdomain Request Platform">
+    <meta name="keywords" content="Eternals, Satya, Cilya, Subdomain, Hacker, Web Development, App Development">
+    <title>Eternals Satya | Subdomain Request</title>
+    <link rel="shortcut icon" href="E.png" type="image/x-icon">
     <style>
-        /* Base Styling */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Courier New', monospace;
-        }
-
+        /* Global Styles */
         body {
-            background: black;
-            color: #0f0;
-            overflow-x: hidden;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #00ff00;
         }
 
-        a {
-            text-decoration: none;
-            color: #0f0;
-            transition: color 0.3s ease-in-out;
-        }
-
-        a:hover {
-            color: #f00;
-        }
-
-        /* Background Animation */
-        .background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background: url('aurora-dragon.jpg') no-repeat center center/cover;
-            animation: moveBackground 10s infinite alternate ease-in-out;
-        }
-
-        @keyframes moveBackground {
-            0% {
-                transform: scale(1) translateY(0px);
-            }
-            100% {
-                transform: scale(1.1) translateY(-20px);
-            }
-        }
-
-        /* Binary Rain Animation */
-        .binary {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: -2;
-        }
-
-        .binary div {
-            position: absolute;
-            top: -10%;
-            color: rgba(0, 255, 0, 0.7);
-            font-size: 20px;
-            animation: rain 5s linear infinite;
-        }
-
-        @keyframes rain {
-            to {
-                transform: translateY(120vh);
-            }
-        }
-
-        /* Header Section */
+        /* Header Styles */
         header {
             text-align: center;
             padding: 20px;
-            border-bottom: 2px solid #0f0;
+            background-color: #111;
+            border-bottom: 3px solid #00ff00;
         }
 
         header h1 {
-            font-size: 3.5em;
-            color: #0f0;
-            text-shadow: 0 0 10px #0f0, 0 0 20px #f00;
+            margin: 0;
+            font-size: 2.5rem;
+            text-shadow: 0px 0px 10px #00ff00;
         }
 
         header p {
-            font-size: 1.5em;
+            margin-top: 10px;
+            font-size: 1.2rem;
             color: #aaa;
-            text-shadow: 0 0 10px #333;
         }
 
-        /* About Section */
-        section {
+        /* Main Section */
+        main {
+            padding: 20px;
             max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            text-align: center;
-            border: 1px solid #0f0;
-            border-radius: 8px;
-            background: rgba(0, 0, 0, 0.8);
-            box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
-            animation: fadeIn 2s ease-in-out;
+            margin: 0 auto;
         }
 
-        section h2 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            text-shadow: 0 0 10px #0f0;
+        main h2 {
+            border-left: 5px solid #00ff00;
+            padding-left: 10px;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
         }
 
-        section p {
-            font-size: 1.2em;
+        main p {
             line-height: 1.6;
-            color: #ddd;
+            color: #ccc;
         }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Contact Section */
-        footer {
+        /* Form Styles */
+        form {
+            margin-top: 30px;
+            background-color: #111;
             padding: 20px;
-            background: #050505;
-            color: #aaa;
+            border-radius: 10px;
+            border: 1px solid #00ff00;
+            box-shadow: 0 0 10px #00ff00;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 1rem;
+            color: #00ff00;
+            background-color: #000;
+            border: 1px solid #00ff00;
+            border-radius: 5px;
+        }
+
+        form input::placeholder {
+            color: #555;
+        }
+
+        form button {
+            width: 100%;
+            padding: 10px;
+            font-size: 1.1rem;
+            background-color: #00ff00;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #008f00;
+        }
+
+        /* Footer Styles */
+        footer {
             text-align: center;
-            border-top: 2px solid #0f0;
+            padding: 20px;
+            margin-top: 30px;
+            background-color: #111;
+            border-top: 3px solid #00ff00;
+            color: #aaa;
         }
 
         footer a {
-            display: inline-block;
-            margin: 10px 0;
-            font-size: 1.2em;
+            color: #00ff00;
+            text-decoration: none;
         }
 
-        /* Loader */
-        #loader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: black;
-            color: #0f0;
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Button Support */
+        .support-buttons {
             display: flex;
             justify-content: center;
-            align-items: center;
-            font-size: 2em;
-            z-index: 999;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .support-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #000;
+            background-color: #00ff00;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            transition: background 0.3s ease;
+            cursor: pointer;
+        }
+
+        .support-button:hover {
+            background-color: #008f00;
+        }
+
+        /* Hidden Details for Cilya and Satya */
+        .hidden-details {
+            font-style: italic;
+            color: #777;
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        .hidden-details p {
+            margin: 10px 0;
         }
     </style>
 </head>
 <body>
-    <!-- Loader -->
-    <div id="loader">Initializing the Dark Web...</div>
-
-    <!-- Background -->
-    <div class="background"></div>
-    <div class="binary">
-        <script>
-            const binary = document.querySelector('.binary');
-            for (let i = 0; i < 50; i++) {
-                const bin = document.createElement('div');
-                bin.textContent = Math.random() < 0.5 ? '0' : '1';
-                bin.style.left = Math.random() * 100 + 'vw';
-                bin.style.animationDuration = Math.random() * 3 + 2 + 's';
-                binary.appendChild(bin);
-            }
-        </script>
-    </div>
-
-    <!-- Header -->
     <header>
-        <h1>HackerDark</h1>
-        <p>Welcome to the realm of shadows where codes rewrite reality.</p>
+        <h1>Eternals Satya</h1>
+        <p>Subdomain Request Platform | Powered by Cilya E-Dos</p>
     </header>
 
-    <!-- About Section -->
-    <section>
+    <main>
         <h2>About Eternals Satya</h2>
         <p>
-            A coder, problem solver, and dark web explorer. 
-            Eternals Satya builds the unthinkable, breaks the unbreakable, and dives into the depths of digital chaos.
+            <strong>Eternals Satya</strong> adalah proyek yang didirikan oleh <strong>Satya</strong>, seorang hacker ulung yang dikenal dengan kemampuan luar biasa dalam merancang dan meretas sistem digital. Bersama dengan timnya, yang secara tidak langsung dibentuk dari kekuatan dua identitas yang berbeda, yaitu Satya dan Cilya, Eternals Satya menjadi simbol dari dunia digital yang penuh misteri dan kemungkinan. 
         </p>
-    </section>
+        <p>
+            Di balik nama <strong>Cilya</strong>, seorang pengembang web dan aplikasi yang memiliki kemampuan mengubah tampilan web (XSS) dan membuat situs menjadi rusak (DDoS), terkandung pula sebuah rahasia yang tidak mudah terlihat oleh orang lain. Meskipun identitasnya muncul sebagai dua, pada kenyataannya hanya satu orang yang memegang kendali atas semuanya: **Satya**. Namun, cerita ini sengaja dibuat agak membingungkan agar tidak mudah dikenali oleh orang luar.
+        </p>
+        
+        <h2>Subdomain Request Form</h2>
+        <form id="subdomainForm">
+            <label for="name">Nama Anda:</label>
+            <input type="text" id="name" placeholder="Masukkan nama Anda" required>
 
-    <!-- Contact Section -->
+            <label for="contact">Kontak Anda:</label>
+            <input type="text" id="contact" placeholder="Masukkan nomor HP/email Anda" required>
+
+            <label for="subdomain">Nama Subdomain:</label>
+            <input type="text" id="subdomain" placeholder="Masukkan subdomain yang diinginkan" required>
+
+            <label for="purpose">Tujuan Penggunaan Subdomain:</label>
+            <input type="text" id="purpose" placeholder="Contoh: Portofolio, Blog, dll." required>
+
+            <button type="button" onclick="sendRequest()">Kirim Permintaan</button>
+        </form>
+
+        <div class="support-buttons">
+            <a href="https://wa.me/12268770888" class="support-button">WhatsApp Support</a>
+            <a href="mailto:eternals.satya@gmail.com" class="support-button">Email Support</a>
+        </div>
+
+        <div class="hidden-details">
+            <p><strong>Catatan:</strong> Cilya, meskipun terkesan sebagai identitas terpisah, sebenarnya adalah bagian dari Satya. Namun, karena alasan pribadi, identitas tersebut sering dibuat ambigu dan tidak terlihat jelas. Hal ini merupakan bagian dari filosofi Eternals Satya, yang berusaha menyembunyikan beberapa hal dari pandangan publik untuk menjaga keseimbangan dalam dunia digital yang terus berkembang.</p>
+        </div>
+    </main>
+
     <footer>
-        <p>Want to collaborate? Let's create chaos together.</p>
-        <a href="https://wa.me/12268770888" target="_blank">Contact Me on WhatsApp</a>
+        <p>&copy; 2024 Eternals Satya | <a href="https://eternals.com">Official Site</a></p>
     </footer>
 
     <script>
-        // Remove loader after page loads
-        window.addEventListener('load', () => {
-            document.getElementById('loader').style.display = 'none';
-        });
+        function sendRequest() {
+            const name = document.getElementById("name").value;
+            const contact = document.getElementById("contact").value;
+            const subdomain = document.getElementById("subdomain").value;
+            const purpose = document.getElementById("purpose").value;
+
+            if (!name || !contact || !subdomain || !purpose) {
+                alert("Harap isi semua field sebelum mengirim permintaan!");
+                return;
+            }
+
+            const email = "eternals.satya@gmail.com";
+            const subject = "Permintaan Subdomain";
+            const body = `Nama: ${name}%0AContact: ${contact}%0ASubdomain: ${subdomain}%0APurpose: ${purpose}`;
+            window.open(`mailto:${email}?subject=${subject}&body=${body}`, "_blank");
+        }
     </script>
 </body>
 </html>
